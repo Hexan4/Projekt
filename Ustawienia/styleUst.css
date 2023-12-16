@@ -1,0 +1,124 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ADD8E6; /* Jasny niebieski */
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+
+header {
+    background-color: #87CEEB; /* Niebieski */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.menu-item {
+    margin: 0 15px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-item a:hover {
+    background-color: white;
+    color: #87CEEB;
+}
+
+.settings {
+    margin-left: auto;
+}
+
+main {
+    text-align: center;
+    font-size: 30px;
+    padding: 50px 0;
+    color: #333333;
+}
+
+.content-box {
+    border: 2px solid #87CEEB;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    min-height: 100px;
+}
+
+
+
+
+/* ... (Twoje istniejące style) ... */
+
+.settings-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.settings-container h2 {
+    text-align: center;
+}
+
+.settings-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.settings-container label {
+    margin: 10px 0;
+}
+
+.settings-container input[type="text"],
+.settings-container input[type="password"],
+.settings-container input[type="file"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #87CEEB;
+    border-radius: 5px;
+    width: 300px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #87CEEB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #76BDE0;
+}
+
+
+
+
+
+
+
+
+footer {
+    background-color: #87CEFA; /* Baby blue */
+    color: white;
+    text-align: right;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}

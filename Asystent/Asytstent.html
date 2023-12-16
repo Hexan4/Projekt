@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asystent</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styleAsystent.css">
+</head>
+<body>
+    <header>
+        <div class="menu-item"><a href="/Users/Student/Desktop/Projekt/StronaGlowna/index.html">Strona Główna</a></div>
+        <div class="menu-item"><a href="/Users/Student/Desktop/Projekt/Asystent/Asytstent.html">Asystent</a></div>
+        <div class="menu-item"><a href="/Users/Student/Desktop/Projekt/ZyciePrywatne/ZyciePrywatne.html">Życie prywatne</a></div>
+        <div class="menu-item"><a href="/Users/Student/Desktop/Projekt/Praca/Praca.html">Praca</a></div>
+        <div class="menu-item"><a href="/Users/Student/Desktop/Projekt/PlanTygodnia/PlanTyg.html">Plan tygodnia</a></div>
+        <div class="menu-item settings"><a href="/Users/Student/Desktop/Projekt/Ustawienia/Ustawienia.html">Ustawienia</a></div>
+    </header>
+
+
+
+    <main>
+        <div class="left-panel">
+            <textarea id="input-text" placeholder="Treść"></textarea>
+            <button onclick="addNote()">Zapytaj tutaj!</button>
+            <div id="response"></div>
+        </div>
+        <div class="right-panel">
+            <div class="note-praca">
+                <textarea id="note-text" placeholder="Wpisz notatkę..."></textarea>
+                <button onclick="addNote()">Dodaj do notatek</button>
+                <div id="notes"></div>
+            </div>
+            <div class="note-zycie">
+                <textarea id="note-text" placeholder="Wpisz notatkę..."></textarea>
+                <button onclick="addNote()">Dodaj do notatek</button>
+                <div id="notes"></div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <p>zaJAVA spółka z Zooo</p>
+    </footer>
+</body>
+</html>
