@@ -41,6 +41,10 @@ main {
     color: #333333;
 }
 
+.logo{
+    text-align: right;
+}
+
 .content-box {
     border: 2px solid #87CEEB;
     margin: 20px auto;
@@ -50,10 +54,6 @@ main {
     min-height: 100px;
 }
 
-
-
-
-/* ... (Twoje istniejące style) ... */
 
 .settings-container {
     width: 80%;

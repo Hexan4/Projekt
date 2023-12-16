@@ -54,17 +54,19 @@ textarea{
     padding: 20px;
     width: 65%;
     
-
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #87CEEB;
     min-height: 200px;
+    position: absolute;
+    bottom: 0px;
 }
 
 .right-panel {
     width: 30%;
     float: right;
     padding-right: 10px;
+    bottom: 0px;
 }
 
 .input-text {
@@ -90,6 +92,25 @@ textarea{
     border-radius: 5px;
     border: 1px solid #87CEEB;
     min-height: 350px;
+}
+
+#rectangle1 {
+	width: 1200px;
+	height: 700px;
+	background-color: white;
+	margin: 40px auto 0;
+}
+#rectangle2 {
+	width: 550px;
+	height: 250px;
+	background-color: white;
+	margin: 0px auto 0;
+}
+#rectangle3 {
+	width: 550px;
+	height: 280px;
+	background-color: white;
+	margin: 0px auto 0;
 }
 
 
@@ -127,10 +148,10 @@ button:hover {
 }
 
 footer {
-    background-color: #87CEFA; /* Baby blue */
+    background-color: #87CEFA;
     color: white;
     text-align: right;
-    padding: 10px;
+    padding: 5px;
     position: fixed;
     bottom: 0;
     width: 100%;

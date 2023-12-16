@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Asystent</title>
+    <title>Plan Tygodnia</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styleAsystent.css">
+    <link rel="stylesheet" type="text/css" href="stylPlanDnia.css">
 </head>
 <body>
     <header>
@@ -18,33 +18,32 @@
 
 
     <main>
-        <div class="left-panel">
-            <div id="rectangle1"></div> 
-            <textarea id="input-text" placeholder="Treść"></textarea>
-            <button onclick="addNote()">Zapytaj tutaj!</button>
-            <div id="response"></div>
-            
-        </div>
-        <div class="right-panel">
-            <div class="note-praca">
-                <div id="rectangle2"></div> 
-                <textarea id="note-text" placeholder="Wpisz notatkę..."></textarea>
-                <button onclick="addNote()">Dodaj do notatek z życia prywatnego</button>
-                <div id="notes"></div>
-            </div>
-            <div class="note-zycie">
-                <div id="rectangle3"></div> 
-                <textarea id="note-text" placeholder="Wpisz notatkę..."></textarea>
-                <button onclick="addNote()">Dodaj do notatek z pracy</button>
-                <div id="notes"></div>
-            </div>
+        <div class="todo-list">
+            <h2>Lista Zadań na wybrany dzień</h2>
+            <input type="text" id="todo-input" placeholder="Dodaj zadanie...">
+            <button onclick="addTask()">Dodaj</button>
+            <ul id="todo-tasks">
+            </ul>
         </div>
     </main>
+
 
 
 
     <footer>
         <p>zaJAVA spółka z Zooo</p>
     </footer>
+    <script>
+        function addTask() {
+            var input = document.getElementById("todo-input");
+            var newTask = input.value;
+            if (newTask) {
+                var li = document.createElement("li");
+                li.textContent = newTask;
+                document.getElementById("todo-tasks").appendChild(li);
+                input.value = ""; // Wyczyść pole tekstowe po dodaniu zadania
+            }
+        }
+    </script>
 </body>
 </html>

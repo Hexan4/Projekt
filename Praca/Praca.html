@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Asystent</title>
+    <title>Życie prywatne</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styleAsystent.css">
+    <link rel="stylesheet" type="text/css" href="stylePraca.css">
 </head>
 <body>
     <header>
@@ -18,29 +18,46 @@
 
 
     <main>
-        <div class="left-panel">
-            <textarea id="input-text" placeholder="Treść"></textarea>
-            <button onclick="addNote()">Zapytaj tutaj!</button>
-            <div id="response"></div>
+        <div class="column" id="notes-column">
+            <h2>Twoje notatki</h2>
+            <textarea placeholder="Wpisz swoje notatki tutaj..."></textarea>
         </div>
-        <div class="right-panel">
-            <div class="note-praca">
-                <textarea id="note-text" placeholder="Wpisz notatkę..."></textarea>
-                <button onclick="addNote()">Dodaj do notatek</button>
-                <div id="notes"></div>
-            </div>
-            <div class="note-zycie">
-                <textarea id="note-text" placeholder="Wpisz notatkę..."></textarea>
-                <button onclick="addNote()">Dodaj do notatek</button>
-                <div id="notes"></div>
-            </div>
+        <div class="column" id="advice-column">
+            <h2>Porada asystenta</h2>
+            <div id="advice-text" class="advice-box"></div>
+        </div>
+        
+        <div class="column" id="plan-column">
+            <h1>Plan zadań</h2>
+            <p>Dzień 4 - Czwartek</p>
+            <p>Telefon do klienta z Krakowa - przedłużenie umowy</p>
+            <p>HR - nowy pracownik z frontu</p>
+            <p>Luch z prezesem</p>
+            <p>Partia w pasjans</p>
+            <p>Code review Kacpra</p>
         </div>
     </main>
 
-
-
     <footer>
-        <p>zaJAVA spółka z Zooo</p>
+        <p>zaJAVA spółka z zooo</p>
     </footer>
+    <script>
+        const adviceText = "Na podstawie Twoich dzisiejszych zadań zalecam rozpocząć od sprawdzenia kodu Kacpra tak aby mógł ruszyć już ze swoimi kolejnymi zadaniami, następnie telefon do klienta, ponieważ według moich informacji po godzinie 12 ma on już inne rzeczy w swoim harmonogramie. Kolejny w kolejności byłby lunch z prezesem, ostatnio w notatkach napisałeś o prośbie związaną z podwyżką, może to dobry moment aby zacząć temat? Po wyczerpującej rozmowie zalecam relaksacyjną partię w pasjansa i zakończyć dzień rozmową z nowym pracownikiem na stanowisko fontend developera, po przeanalizowaniu jego profilu stwierdzam, że warto dopytać go o jego autorski projekt strony dla banku.";
+        let i = 0;
+        const speed = 50; // szybkość pisania w milisekundach
+    
+        function typeWriter() {
+            if (i < adviceText.length) {
+                document.getElementById("advice-text").innerHTML += adviceText.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    
+        window.onload = function() {
+            typeWriter();
+        };
+    </script>
+    
 </body>
 </html>

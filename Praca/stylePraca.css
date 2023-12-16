@@ -35,29 +35,47 @@ header {
     margin-left: auto;
 }
 
-main {
-    text-align: center;
-    font-size: 13px;
-    padding: 50px 0;
-    color: #333333;
-}
 
-.content-row {
+main {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    padding: 20px;
 }
 
-.content-box {
-    border: 2px solid #87CEEB;
-    margin: 10px;
-    padding: 20px;
-    width: calc(50% - 20px); /* Odejmujemy margines */
-    box-sizing: border-box;
+.column {
+    flex: 0 0 auto;
+}
+
+#notes-column {
+    width: 20%;
+}
+
+#advice-column {
+    width: 50%;
+    text-align: center;
+}
+
+#plan-column {
+    width: 20%;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.advice-box {
+    width: 100%;
+    height: 700px;
+    background-color: white;
+    border: 1px solid #87CEEB;
+    margin-top: 10px;
 }
 
 footer {
-    background-color: #87CEFA; /* Baby blue */
+    background-color: #87CEFA;
     color: white;
     text-align: right;
     padding: 10px;

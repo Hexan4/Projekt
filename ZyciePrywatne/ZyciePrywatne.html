@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Asystent</title>
+    <title>Życie prywatne</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styleAsystent.css">
+    <link rel="stylesheet" type="text/css" href="styleZycie.css ">
 </head>
 <body>
     <header>
@@ -18,29 +18,47 @@
 
 
     <main>
-        <div class="left-panel">
-            <textarea id="input-text" placeholder="Treść"></textarea>
-            <button onclick="addNote()">Zapytaj tutaj!</button>
-            <div id="response"></div>
+        <div class="column" id="notes-column">
+            <h2>Twoje notatki</h2>
+            <textarea placeholder="Wpisz swoje notatki tutaj..."></textarea>
         </div>
-        <div class="right-panel">
-            <div class="note-praca">
-                <textarea id="note-text" placeholder="Wpisz notatkę..."></textarea>
-                <button onclick="addNote()">Dodaj do notatek</button>
-                <div id="notes"></div>
-            </div>
-            <div class="note-zycie">
-                <textarea id="note-text" placeholder="Wpisz notatkę..."></textarea>
-                <button onclick="addNote()">Dodaj do notatek</button>
-                <div id="notes"></div>
-            </div>
+        <div class="column" id="advice-column">
+            <h2>Porada asystenta</h2>
+            <div id="advice-text" class="advice-box"></div>
+        </div>
+        <div class="column" id="plan-column">
+            <h1>Twój sugerowany plan dnia na postawie analizy ostatnich dni</h1>
+            <p>5:00 - Wstanie z łóżka</p>
+            <p>5:20 - Medytacja</p>
+            <p>6:20 - poranny rozruch</p>
+            <p>6:40 - Śniadanie</p>
+            <p>7:00 - Praca</p>
+            <p>15:00 - Wyjście na siłownię</p>
+            <p>18:00 - Kolacja z dziewczyną</p>
+            <p>21:00 - Wspólny film</p>
+            <p>22:30 - Sen</p>
         </div>
     </main>
 
-
-
     <footer>
-        <p>zaJAVA spółka z Zooo</p>
+        <p>zaJAVA spółka z zooo</p>
     </footer>
+    <script>
+        const adviceText = "Na podstawie analizy ostatnich Twoich dni przygotowałem idealnie zobtymalizowany plan dnia: Wstań o godzinie 5:00, ponieważ według danych z Twojego zegarka wtedy jesteś najbardziej wypoczęty i produktywny w dalszej części dnia. Następnie wykonaj godzinę medytacji aby przygotować się do kolejnego produktywnego dnia. po medytacji oraz porannym rozruchu czas na śniadanie - jeżeli chcesz mogę przygotować dla Ciebie idealny przepis biorąc pod uwagę Twoje ostatnie posiłki oraz Twoją kondycję fizyczną. Rozpocznij prację o godzinie 7. Po pracy najlepiej wybierz się na siłownię zgodnie z Twoim harmonogromem dzisiaj wypada dzień treningowy. Ponieważ zgodnie z moimi danymi ostatnio mało czasu spędzałeś ze swoją wybranką oraz w ostatnich dniach w jej notatkach można było zauważyć chęć pójścia do kina zaproponowałem aby takowe zainicjować. Tuż po romantycznej kolacji. o godzinie 22:30 połóż się spać aby być jutro w optymalnej formie.";
+        let i = 0;
+        const speed = 50;
+    
+        function typeWriter() {
+            if (i < adviceText.length) {
+                document.getElementById("advice-text").innerHTML += adviceText.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    
+        window.onload = function() {
+            typeWriter();
+        };
+    </script>
 </body>
 </html>

@@ -44,54 +44,31 @@ main {
 
 
 
-textarea{
-
-    width: 90%;
-}
-
-.left-panel {
-    float: left;
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 dni w tygodniu */
+    gap: 10px;
     padding: 20px;
-    width: 65%;
-    
-
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #87CEEB;
-    min-height: 200px;
+    max-width: 600px;
+    margin: auto;
 }
 
-.right-panel {
-    width: 30%;
-    float: right;
-    padding-right: 10px;
+.day {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #87CEEB;
+    border-radius: 5px;
+    text-align: center;
 }
 
-.input-text {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #87CEEB;
-    min-height: 20px;
-}
-.note-praca {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #87CEEB;
-    min-height: 350px;
-}
-.note-zycie {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #87CEEB;
-    min-height: 350px;
+.day a {
+    text-decoration: none;
+    color: #333333;
 }
 
+.day:hover {
+    background-color: #87CEFA;
+}
 
 
 

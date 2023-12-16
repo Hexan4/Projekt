@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
     color: #333333;
-    
 }
 
 header {
@@ -37,23 +36,65 @@ header {
 
 main {
     text-align: center;
-    font-size: 13px;
+    font-size: 30px;
     padding: 50px 0;
     color: #333333;
 }
 
-.content-row {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+
+.todo-list {
+    margin: auto;
+    width: 60%;
+    padding: 20px;
 }
+
+#todo-input {
+    width: 70%;
+    padding: 10px;
+}
+
+#todo-tasks {
+    list-style-type: none;
+    padding: 0;
+}
+
+#todo-tasks li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+
+
+
+button {
+    padding: 10px 20px;
+    background-color: #87CEEB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #76BDE0;
+}
+
+
+
+
+
+
+
+
 
 .content-box {
     border: 2px solid #87CEEB;
-    margin: 10px;
+    margin: 20px auto;
     padding: 20px;
-    width: calc(50% - 20px); /* Odejmujemy margines */
-    box-sizing: border-box;
+    width: 80%;
+    max-width: 600px;
+    min-height: 100px;
 }
 
 footer {
